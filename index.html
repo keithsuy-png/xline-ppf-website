@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-line | Paint Protection Film — Protection, Redefined.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            xline: {
+              blue: '#060097',
+              pink: '#e6007e',
+              purple: '#c10fff',
+              dark: '#1e293b',
+              muted: '#67768e',
+              light: '#f9f6fe',
+              gray: '#F2F5F7',
+              yellow: '#ffcd57',
+              black: '#111827',
+              link: '#046BD2',
+            }
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    .hero-video { object-fit: cover; width: 100%; height: 100%; }
+    .package-card { transition: all 0.4s ease; }
+    .package-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(6,0,151,0.12); }
+    .tab-btn.active, .pkg-tab.active { background: linear-gradient(135deg, #e6007e, #ff3399); color: white; }
+    .benefit-card:hover { border-color: #e6007e; }
+    .gradient-text { background: linear-gradient(135deg, #e6007e, #ff3399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .faq-item { transition: all 0.3s ease; }
+    .faq-item:hover { background: #f9f6fe; }
+  </style>
+</head>
+<body class="bg-white text-xline-dark">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-xline-black/95 backdrop-blur-sm border-b border-gray-800 z-50">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <img src="logo.png" alt="X-line" class="h-8">
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-white">
+        <a href="#" class="hover:text-xline-pink transition">Home</a>
+        <a href="#ppf" class="hover:text-xline-pink transition">Paint Protection Film</a>
+        <a href="#products" class="hover:text-xline-pink transition flex items-center gap-1">Products <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+        <a href="#contact" class="hover:text-xline-pink transition">Contact Us</a>
+        <a href="#" class="hover:text-xline-pink transition">Warranty</a>
+      </div>
+      <a href="#contact" class="bg-gradient-to-r from-xline-pink to-pink-400 text-white text-sm font-bold px-6 py-2.5 rounded-full hover:shadow-lg hover:shadow-pink-200 transition">Get a Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Video Background -->
+  <section class="relative h-screen bg-xline-black overflow-hidden pt-16">
+    <!-- Video background placeholder - client will provide video of car being wrapped -->
+    <video autoplay muted loop playsinline class="hero-video absolute inset-0 z-0">
+      <source src="https://assets.mixkit.co/videos/46890/46890-720.mp4" type="video/mp4">
+    </video>
+    <!-- Fallback image while video loads / if no video -->
+    <img src="https://x-line.com.au/wp-content/uploads/2026/03/photo-1545042727-9553d94720fd.avif" alt="Luxury car with PPF" class="absolute inset-0 w-full h-full object-cover z-0">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10"></div>
+    <div class="relative z-20 max-w-7xl mx-auto px-6 flex flex-col justify-center h-full">
+      <p class="text-xline-pink font-bold text-sm uppercase tracking-[0.3em] mb-4">Protection, Redefined.</p>
+      <h1 class="text-white text-5xl md:text-7xl font-black mb-4 leading-tight">The Ultimate<br>Finish.</h1>
+      <p class="text-gray-300 text-lg md:text-xl max-w-xl mb-4">Self Healing Paint Protection Film</p>
+      <p class="text-gray-400 text-base max-w-lg mb-8">Advanced paint protection film engineered for clarity, durability, and performance. Precision manufactured in Korea.</p>
+      <div class="flex gap-4">
+        <a href="#products" class="bg-gradient-to-r from-xline-pink to-pink-400 text-white font-bold px-8 py-3.5 rounded-full hover:shadow-lg hover:shadow-pink-300/30 transition text-sm">View Products</a>
+        <a href="#contact" class="border-2 border-white/30 text-white font-bold px-8 py-3.5 rounded-full hover:bg-white/10 transition text-sm">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 Protection Package Options -->
+  <section id="packages" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-center text-xline-pink font-bold text-sm uppercase tracking-[0.2em] mb-3">Choose Your Coverage</p>
+      <h2 class="text-4xl md:text-5xl font-black text-center mb-4 uppercase">3 Protection Packages.</h2>
+      <p class="text-center text-xline-muted text-sm mb-10">Applied Paint Protection Film area SHOWN IN WHITE</p>
+
+      <!-- Package Tabs -->
+      <div class="flex justify-center gap-3 mb-12" id="pkg-tabs">
+        <button class="pkg-tab active text-sm font-bold px-8 py-3 rounded-full transition" data-pkg="full-front">Full Front End</button>
+        <button class="pkg-tab bg-xline-gray text-xline-dark text-sm font-bold px-8 py-3 rounded-full transition" data-pkg="track-pack">Track Pack</button>
+        <button class="pkg-tab bg-xline-gray text-xline-dark text-sm font-bold px-8 py-3 rounded-full transition" data-pkg="full-wrap">Full Wrap</button>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+        <!-- Car Coverage Images -->
+        <div class="relative">
+          <!-- All 3 packages use the same car photo with different highlight overlays -->
+          <div class="pkg-diagram transition-all duration-500" data-diagram="full-front">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&q=85&fm=jpg&fit=crop" alt="Full Front End PPF coverage" class="w-full h-[360px] object-cover object-center rounded-2xl shadow-lg">
+          </div>
+
+          <div class="pkg-diagram hidden transition-all duration-500" data-diagram="track-pack">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&q=85&fm=jpg&fit=crop" alt="Track Pack PPF coverage" class="w-full h-[360px] object-cover object-center rounded-2xl shadow-lg">
+          </div>
+
+          <div class="pkg-diagram hidden transition-all duration-500" data-diagram="full-wrap">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&q=85&fm=jpg&fit=crop" alt="Full Vehicle Wrap PPF coverage" class="w-full h-[360px] object-cover object-center rounded-2xl shadow-lg">
+          </div>
+        </div>
+
+        <!-- Tab Content Panels -->
+        <div>
+          <!-- Full Front End -->
+          <div class="pkg-panel transition-all duration-400" data-panel="full-front">
+            <h3 class="text-3xl font-black mb-3">Full Front End</h3>
+            <p class="text-xline-muted text-sm mb-6">Our most popular package, the Full Front End delivers maximum coverage to all forward-facing panels.</p>
+            <div class="border-t border-gray-200">
+              <details class="group border-b border-gray-200">
+                <summary class="w-full flex items-center gap-2 py-4 text-sm font-bold text-xline-dark cursor-pointer list-none hover:text-xline-pink transition">
+                  <span class="text-xline-pink group-open:rotate-45 transition-transform duration-300 text-lg leading-none">+</span> INCLUDES
+                </summary>
+                <ul class="pb-4 pl-8 text-sm text-xline-muted space-y-1 list-disc">
+                  <li>Full bonnet</li>
+                  <li>Front bumper</li>
+                  <li>Quarter panels</li>
+                  <li>Side mirrors</li>
+                  <li>Door cups</li>
+                </ul>
+              </details>
+              <details class="group border-b border-gray-200">
+                <summary class="w-full flex items-center gap-2 py-4 text-sm font-bold text-xline-dark cursor-pointer list-none hover:text-xline-pink transition">
+                  <span class="text-xline-pink group-open:rotate-45 transition-transform duration-300 text-lg leading-none">+</span> OPTIONAL ADD ONS
+                </summary>
+                <ul class="pb-4 pl-8 text-sm text-xline-muted space-y-1 list-disc">
+                  <li>Headlights</li>
+                  <li>Tail Lights</li>
+                  <li>Roof</li>
+                  <li>Sunroof</li>
+                  <li>Door Edges</li>
+                </ul>
+              </details>
+            </div>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-xline-pink to-pink-400 text-white text-sm font-bold px-7 py-3 rounded-full hover:shadow-lg hover:shadow-pink-200 transition">Request an Appointment <span class="ml-1">&#8594;</span></a>
+          </div>
+
+          <!-- Track Pack -->
+          <div class="pkg-panel hidden transition-all duration-400" data-panel="track-pack">
+            <h3 class="text-3xl font-black mb-3">Track Pack</h3>
+            <p class="text-xline-muted text-sm mb-6">Designed for high-performance vehicles frequently driven at high speeds or on race tracks. Extended coverage beyond the full front end including rocker panels, A-pillars, and leading roof edge.</p>
+            <div class="border-t border-gray-200">
+              <details class="group border-b border-gray-200">
+                <summary class="w-full flex items-center gap-2 py-4 text-sm font-bold text-xline-dark cursor-pointer list-none hover:text-xline-pink transition">
+                  <span class="text-xline-pink group-open:rotate-45 transition-transform duration-300 text-lg leading-none">+</span> INCLUDES
+                </summary>
+                <ul class="pb-4 pl-8 text-sm text-xline-muted space-y-1 list-disc">
+                  <li>Full bonnet</li>
+                  <li>Front bumper</li>
+                  <li>Quarter panels</li>
+                  <li>Side mirrors</li>
+                  <li>A-pillars</li>
+                  <li>Leading edge of roof</li>
+                  <li>Lower sills / rocker panels</li>
+                </ul>
+              </details>
+            </div>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-xline-pink to-pink-400 text-white text-sm font-bold px-7 py-3 rounded-full hover:shadow-lg hover:shadow-pink-200 transition">Request an Appointment <span class="ml-1">&#8594;</span></a>
+          </div>
+
+          <!-- Full Wrap -->
+          <div class="pkg-panel hidden transition-all duration-400" data-panel="full-wrap">
+            <h3 class="text-3xl font-black mb-3">Full Vehicle Wrap</h3>
+            <p class="text-xline-muted text-sm mb-6">Every painted surface is seamlessly wrapped for long-term protection. The ultimate choice for preserving your vehicle's finish and resale value.</p>
+            <div class="border-t border-gray-200">
+              <details class="group border-b border-gray-200">
+                <summary class="w-full flex items-center gap-2 py-4 text-sm font-bold text-xline-dark cursor-pointer list-none hover:text-xline-pink transition">
+                  <span class="text-xline-pink group-open:rotate-45 transition-transform duration-300 text-lg leading-none">+</span> INCLUDES
+                </summary>
+                <div class="pb-4 pl-8 text-sm text-xline-muted">
+                  <p class="font-semibold text-xline-dark mb-2">ALL EXTERIOR PAINTED PANELS INCLUDING:</p>
+                  <ul class="space-y-1 list-disc">
+                    <li>All painted body panels, including front and rear bumpers, bonnet, roof, doors, side panels, guards, pillars, and sills</li>
+                    <li>Side mirrors, door cups, and fuel door</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="group border-b border-gray-200">
+                <summary class="w-full flex items-center gap-2 py-4 text-sm font-bold text-xline-dark cursor-pointer list-none hover:text-xline-pink transition">
+                  <span class="text-xline-pink group-open:rotate-45 transition-transform duration-300 text-lg leading-none">+</span> OPTIONAL ADD ONS
+                </summary>
+                <ul class="pb-4 pl-8 text-sm text-xline-muted space-y-1 list-disc">
+                  <li>Headlights</li>
+                  <li>Tail Lights</li>
+                  <li>Sunroof</li>
+                </ul>
+              </details>
+            </div>
+            <a href="#contact" class="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-xline-pink to-pink-400 text-white text-sm font-bold px-7 py-3 rounded-full hover:shadow-lg hover:shadow-pink-200 transition">Request an Appointment <span class="ml-1">&#8594;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Invisible Shield -->
+  <section class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="relative rounded-2xl overflow-hidden">
+        <img src="https://x-line.com.au/wp-content/uploads/2026/03/photo-1738780150744-80f2c580eed3-scaled.avif" alt="Red car in workshop" class="w-full h-[420px] object-cover">
+        <div class="absolute inset-0 bg-gradient-to-l from-white/95 via-white/80 to-transparent"></div>
+        <div class="absolute right-0 top-0 bottom-0 flex items-center w-1/2">
+          <div class="p-8">
+            <p class="text-xline-pink font-bold text-xs uppercase tracking-widest mb-2">The Invisible Shield</p>
+            <h3 class="text-2xl font-black mb-4 text-xline-dark">Advanced Self-Healing Protection</h3>
+            <p class="text-xs text-xline-muted leading-relaxed">Paint Protection Film is the ultimate defence for modern paintwork — a precision-engineered layer that protects without altering the look or feel of your vehicle. X-line PPF is precision-cut and seamlessly applied to your vehicle's paint, forming an invisible, durable shield. It provides relentless, self-healing protection against road debris, stone chips, scratches, and scrapes. Engineered for long-term durability and guaranteed not to discolour.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Benefits -->
+  <section id="ppf" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xline-pink font-bold text-sm uppercase tracking-[0.2em] mb-3">Why X-line</p>
+      <h2 class="text-3xl md:text-4xl font-black mb-12 uppercase">Core Benefits</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="benefit-card border border-gray-100 rounded-2xl overflow-hidden transition">
+          <video autoplay loop muted playsinline class="w-full h-56 object-cover">
+            <source src="https://assets.mixkit.co/videos/47831/47831-720.mp4" type="video/mp4">
+          </video>
+          <div class="p-5">
+            <h4 class="font-bold text-sm mb-2">Self-Healing Technology</h4>
+            <p class="text-xs text-xline-muted leading-relaxed">Minor swirl marks and fine scratches disappear when exposed to heat. The self-healing layer continuously restores the surface.</p>
+          </div>
+        </div>
+        <div class="benefit-card border border-gray-100 rounded-2xl overflow-hidden transition">
+          <video autoplay loop muted playsinline class="w-full h-56 object-cover">
+            <source src="https://assets.mixkit.co/videos/47588/47588-720.mp4" type="video/mp4">
+          </video>
+          <div class="p-5">
+            <h4 class="font-bold text-sm mb-2">Impact Resistance</h4>
+            <p class="text-xs text-xline-muted leading-relaxed">Absorbs impacts from stones, debris, and everyday driving hazards. Acts as a durable barrier between your paint and the road.</p>
+          </div>
+        </div>
+        <div class="benefit-card border border-gray-100 rounded-2xl overflow-hidden transition">
+          <video autoplay loop muted playsinline class="w-full h-56 object-cover">
+            <source src="https://assets.mixkit.co/active_storage/video_items/99838/1717104442/99838-video-720.mp4" type="video/mp4">
+          </video>
+          <div class="p-5">
+            <h4 class="font-bold text-sm mb-2">Hydrophobic Top Coat</h4>
+            <p class="text-xs text-xline-muted leading-relaxed">Water beads and rolls off effortlessly. Reduces dirt buildup, makes washing easier, and preserves a high-gloss finish.</p>
+          </div>
+        </div>
+        <div class="benefit-card border border-gray-100 rounded-2xl overflow-hidden transition">
+          <video autoplay loop muted playsinline class="w-full h-56 object-cover">
+            <source src="https://assets.mixkit.co/videos/47833/47833-720.mp4" type="video/mp4">
+          </video>
+          <div class="p-5">
+            <h4 class="font-bold text-sm mb-2">Optical Clarity</h4>
+            <p class="text-xs text-xline-muted leading-relaxed">Crystal-clear clarity and seamless application helps retain that showroom look. Virtually invisible once installed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-20 bg-xline-light">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-4">
+        <h2 class="text-4xl md:text-5xl font-black uppercase leading-tight">
+          <span class="gradient-text">Protect.</span> <span class="gradient-text">Perfect.</span> <span class="gradient-text">Transform.</span>
+        </h2>
+      </div>
+      <p class="text-center text-xline-muted text-sm mb-4">Choose Your Finish. Define Your Standard.</p>
+      <p class="text-center text-xline-muted text-xs mb-12">Two finishes. One standard — uncompromised protection.</p>
+
+      <div class="flex justify-center gap-3 mb-12">
+        <button class="tab-btn active text-sm font-bold px-8 py-3 rounded-full transition" data-product-tab="clear-gloss">Clear Gloss</button>
+        <button class="tab-btn bg-white text-xline-dark text-sm font-bold px-8 py-3 rounded-full border border-gray-200 transition" data-product-tab="satin-shield">Satin Shield</button>
+      </div>
+
+      <!-- Clear Gloss -->
+      <div class="product-panel grid md:grid-cols-2 gap-8 items-start" data-product="clear-gloss">
+        <div>
+          <img src="https://x-line.com.au/wp-content/uploads/2026/03/photo-1727067533292-80d813178411.avif" alt="Orange sports car with X-line Clear Gloss PPF" class="w-full h-[400px] object-cover rounded-2xl shadow-lg">
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <span class="inline-block bg-xline-light text-xline-pink text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">X-line Clear Gloss</span>
+          <h3 class="text-2xl font-black mb-2">High Gloss Finish. Maximum Protection.</h3>
+          <p class="text-sm text-xline-muted mb-4 leading-relaxed">X-line Clear Gloss enhances your vehicle's finish with a deep, high-gloss shine while delivering advanced surface protection. Designed to preserve your paint against everyday wear, it creates a smooth, polished look that keeps your vehicle looking newer for longer.</p>
+          <p class="text-sm font-bold mb-3">Key Features:</p>
+          <ul class="text-sm text-xline-muted space-y-2 list-none">
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>Korean Manufactured</strong> — precision multi-layer technology</span></li>
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>10-Year Guarantee</strong> — long-term performance & reliability</span></li>
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>Self-Healing Technology</strong> — eliminates minor scratches with heat</span></li>
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>Hydrophobic Top Coat</strong> — repels water and contaminants</span></li>
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>Optical Clarity</strong> — exceptional depth and definition</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Satin Shield -->
+      <div class="product-panel hidden grid md:grid-cols-2 gap-8 items-start" data-product="satin-shield">
+        <div>
+          <img src="https://images.unsplash.com/photo-1741014150642-a40a93af4fad?w=1600&q=85&fm=jpg&fit=crop" alt="Matte grey sports car with X-line Satin Shield PPF" class="w-full h-[400px] object-cover rounded-2xl shadow-lg">
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <span class="inline-block bg-xline-light text-xline-muted text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">X-line Satin Shield</span>
+          <h3 class="text-2xl font-black mb-2">Satin Finish. Stealth Protection.</h3>
+          <p class="text-sm text-xline-muted mb-4 leading-relaxed">X-line Satin Shield delivers a smooth, matte-like finish that transforms your vehicle's appearance while providing the same advanced protection. Ideal for owners who prefer a refined, understated aesthetic without sacrificing durability.</p>
+          <p class="text-sm font-bold mb-3">Key Features:</p>
+          <ul class="text-sm text-xline-muted space-y-2 list-none">
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>Korean Manufactured</strong> — precision multi-layer technology</span></li>
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>10-Year Guarantee</strong> — long-term performance & reliability</span></li>
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>Self-Healing Technology</strong> — eliminates minor scratches with heat</span></li>
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>Satin Finish</strong> — smooth, matte-like aesthetic</span></li>
+            <li class="flex items-start gap-2"><span class="text-xline-pink mt-0.5">&#10003;</span> <span><strong>Stain Resistant</strong> — repels contaminants and discolouration</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Good. Better. Best. - The Facts -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="text-center text-xline-pink font-bold text-sm uppercase tracking-[0.2em] mb-3">At a Glance</p>
+      <h2 class="text-3xl md:text-4xl font-black text-center mb-12 uppercase">Good. Better. Best.</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b-2 border-gray-200">
+              <th class="py-3 px-2 text-left w-44"></th>
+              <th class="py-3 px-4 text-center font-bold text-[10px] uppercase text-xline-muted">Self-Healing<br>Protection</th>
+              <th class="py-3 px-4 text-center font-bold text-[10px] uppercase text-xline-muted">Hydrophobic<br>Top Coat</th>
+              <th class="py-3 px-4 text-center font-bold text-[10px] uppercase text-xline-muted">Clarity<br>& Shine</th>
+              <th class="py-3 px-4 text-center font-bold text-[10px] uppercase text-xline-muted">Stain<br>Resistance</th>
+              <th class="py-3 px-4 text-center font-bold text-[10px] uppercase text-xline-muted">Impact<br>Resistance</th>
+              <th class="py-3 px-4 text-center font-bold text-[10px] uppercase text-xline-muted">Warranty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100 bg-xline-light/50">
+              <td class="py-5 px-2 flex items-center gap-3">
+                <span class="inline-flex items-center justify-center bg-gradient-to-b from-xline-pink to-pink-400 text-white text-[9px] font-bold w-7 py-5 rounded-sm uppercase" style="writing-mode: vertical-lr; transform: rotate(180deg);">Best</span>
+                <div>
+                  <div class="font-black text-sm">X-LINE</div>
+                  <div class="font-black text-sm">CLEAR GLOSS</div>
+                </div>
+              </td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-pink text-xs tracking-widest">&#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-pink text-xs tracking-widest">&#9679; &#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-pink text-xs tracking-widest">&#9679; &#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-pink text-xs tracking-widest">&#9679; &#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-pink text-xs tracking-widest">&#9679; &#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center font-black text-2xl text-xline-dark">10<span class="text-xs align-super font-bold">YR</span></td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-5 px-2 flex items-center gap-3">
+                <span class="inline-flex items-center justify-center bg-gradient-to-b from-xline-muted to-gray-600 text-white text-[9px] font-bold w-7 py-5 rounded-sm uppercase" style="writing-mode: vertical-lr; transform: rotate(180deg);">Good</span>
+                <div>
+                  <div class="font-black text-sm">X-LINE</div>
+                  <div class="font-black text-sm">SATIN SHIELD</div>
+                </div>
+              </td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-muted text-xs tracking-widest">&#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-muted text-xs tracking-widest">&#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-muted text-xs tracking-widest">&#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-muted text-xs tracking-widest">&#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center"><span class="text-xline-muted text-xs tracking-widest">&#9679; &#9679; &#9679;</span></td>
+              <td class="py-5 px-4 text-center font-black text-2xl text-xline-dark">10<span class="text-xs align-super font-bold">YR</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Surface Protection -->
+  <section class="py-20 bg-xline-gray">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="text-center text-xline-pink font-bold text-sm uppercase tracking-[0.2em] mb-3">Precision Manufactured in Korea</p>
+      <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase">Advanced Surface Protection</h2>
+      <p class="text-center text-xline-muted text-sm max-w-2xl mx-auto mb-10">X-line is a high-performance paint protection film engineered to deliver measurable durability, structural stability and long-term optical clarity.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl">
+          <h3 class="text-base font-bold mb-3">Korean Manufactured</h3>
+          <p class="text-sm text-xline-muted">Precision manufactured using advanced multi-layer technology for consistent quality, durability, and optical clarity. Every roll produced under controlled conditions.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl">
+          <h3 class="text-base font-bold mb-3">10-Year Guarantee</h3>
+          <p class="text-sm text-xline-muted">Backed by a comprehensive 10-year warranty, ensuring long-term performance, reliability, and confidence in every installation.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border-2 border-xline-pink">
+          <h3 class="text-base font-bold mb-3 text-xline-pink">Engineered Performance</h3>
+          <p class="text-sm text-xline-muted">Uniform thickness, consistent adhesive behaviour and predictable installation performance. Developed for demanding automotive environments.</p>
+          <p class="text-sm font-bold mt-4 italic text-xline-dark">Uncompromised protection for any vehicle.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-xline-pink to-pink-400 text-white text-sm font-bold px-7 py-3 rounded-full hover:shadow-lg hover:shadow-pink-200 transition">Request a Quote <span>&#8594;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PPF FAQs -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xline-pink font-bold text-sm uppercase tracking-[0.2em] mb-3">Got Questions?</p>
+      <h2 class="text-2xl md:text-3xl font-black mb-8 uppercase">Paint Protection Film (PPF) FAQs</h2>
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <img src="https://images.unsplash.com/photo-1755288348835-dc6c29852299?w=1600&q=85&fm=jpg&fit=crop" alt="Luxury car in showroom" class="w-full h-auto max-h-[480px] object-cover rounded-2xl">
+        </div>
+        <div class="divide-y divide-gray-100">
+          <details class="faq-item group">
+            <summary class="py-4 px-3 rounded-lg flex items-start gap-3 cursor-pointer list-none">
+              <span class="text-xline-pink font-bold text-sm mt-0.5 group-open:rotate-45 transition-transform">+</span>
+              <span class="text-sm font-semibold">What is PPF?</span>
+            </summary>
+            <p class="text-xs text-xline-muted px-3 pb-4 pl-8">Paint Protection Film is a virtually invisible polyurethane film applied to your vehicle's exterior. It acts as a physical barrier against stone chips, scratches, bug splatter, and road debris.</p>
+          </details>
+          <details class="faq-item group">
+            <summary class="py-4 px-3 rounded-lg flex items-start gap-3 cursor-pointer list-none">
+              <span class="text-xline-pink font-bold text-sm mt-0.5 group-open:rotate-45 transition-transform">+</span>
+              <span class="text-sm font-semibold">Does PPF affect the appearance of my vehicle?</span>
+            </summary>
+            <p class="text-xs text-xline-muted px-3 pb-4 pl-8">No. High-quality PPF is optically clear and designed to maintain your vehicle's original colour and finish. Gloss films enhance shine, while satin films create a smooth matte appearance.</p>
+          </details>
+          <details class="faq-item group">
+            <summary class="py-4 px-3 rounded-lg flex items-start gap-3 cursor-pointer list-none">
+              <span class="text-xline-pink font-bold text-sm mt-0.5 group-open:rotate-45 transition-transform">+</span>
+              <span class="text-sm font-semibold">Should I get ceramic coating or PPF?</span>
+            </summary>
+            <p class="text-xs text-xline-muted px-3 pb-4 pl-8">Both offer unique benefits. PPF provides the strongest protection against physical damage, while ceramic coating enhances gloss, hydrophobicity, and ease of cleaning. Many customers choose to combine both for maximum protection and finish.</p>
+          </details>
+          <details class="faq-item group">
+            <summary class="py-4 px-3 rounded-lg flex items-start gap-3 cursor-pointer list-none">
+              <span class="text-xline-pink font-bold text-sm mt-0.5 group-open:rotate-45 transition-transform">+</span>
+              <span class="text-sm font-semibold">How long does PPF last?</span>
+            </summary>
+            <p class="text-xs text-xline-muted px-3 pb-4 pl-8">With proper care, premium PPF can last for many years. It is engineered for long-term durability and resistance to environmental wear.</p>
+          </details>
+          <details class="faq-item group">
+            <summary class="py-4 px-3 rounded-lg flex items-start gap-3 cursor-pointer list-none">
+              <span class="text-xline-pink font-bold text-sm mt-0.5 group-open:rotate-45 transition-transform">+</span>
+              <span class="text-sm font-semibold">Can PPF be removed?</span>
+            </summary>
+            <p class="text-xs text-xline-muted px-3 pb-4 pl-8">PPF can be applied to most painted surfaces on any vehicle, including cars, motorcycles, and performance vehicles. It can also be safely removed by a professional without damaging the underlying paint.</p>
+          </details>
+          <details class="faq-item group">
+            <summary class="py-4 px-3 rounded-lg flex items-start gap-3 cursor-pointer list-none">
+              <span class="text-xline-pink font-bold text-sm mt-0.5 group-open:rotate-45 transition-transform">+</span>
+              <span class="text-sm font-semibold">Will PPF turn yellow over time?</span>
+            </summary>
+            <p class="text-xs text-xline-muted px-3 pb-4 pl-8">High-quality modern films are designed to resist yellowing and maintain clarity over time when properly maintained.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Get In Touch -->
+  <section id="contact" class="py-20 bg-xline-light">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="text-xline-pink font-bold text-sm uppercase tracking-[0.2em] mb-3">Get In Touch</p>
+          <h2 class="text-3xl md:text-4xl font-black mb-6 uppercase">Ready to Protect Your Investment?</h2>
+          <p class="text-xline-muted text-sm mb-8">Contact us to learn more about X-line Paint Protection Film or to schedule an installation.</p>
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-r from-xline-pink to-pink-400 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs text-xline-muted">Phone</p>
+                <p class="font-bold text-sm">1300 891 779</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-r from-xline-pink to-pink-400 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs text-xline-muted">Email</p>
+                <p class="font-bold text-sm">enquiries@x-line.com.au</p>
+              </div>
+            </div>
+          </div>
+          <video autoplay loop muted playsinline class="w-full h-48 object-cover rounded-2xl">
+            <source src="https://assets.mixkit.co/videos/47830/47830-720.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <h3 class="text-xl font-bold mb-6">Send us a message</h3>
+          <form class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <input type="text" placeholder="First Name" class="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-xline-pink">
+              <input type="text" placeholder="Last Name" class="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-xline-pink">
+            </div>
+            <input type="email" placeholder="Email Address" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-xline-pink">
+            <input type="tel" placeholder="Phone Number" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-xline-pink">
+            <select class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm text-xline-muted focus:outline-none focus:border-xline-pink">
+              <option>Select a Product</option>
+              <option>X-line Clear Gloss</option>
+              <option>X-line Satin Shield</option>
+            </select>
+            <textarea rows="4" placeholder="Tell us about your vehicle and requirements..." class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-xline-pink"></textarea>
+            <button type="submit" class="w-full bg-gradient-to-r from-xline-pink to-pink-400 text-white font-bold py-3.5 rounded-full hover:shadow-lg hover:shadow-pink-200 transition">Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-xline-black text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-xline-pink font-black text-2xl">X</span><span class="text-white font-black text-2xl">-line</span>
+          </div>
+          <p class="text-xs text-gray-500 leading-relaxed mb-4">Advanced paint protection film engineered for clarity, durability, and performance. Precision manufactured in Korea.</p>
+          <p class="text-xs text-gray-600">&copy; 2026 X-line Australia</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">Products</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-xline-pink transition">X-line Clear Gloss</a></li>
+            <li><a href="#" class="hover:text-xline-pink transition">X-line Satin Shield</a></li>
+            <li><a href="#" class="hover:text-xline-pink transition">All Products</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-xline-pink transition">Paint Protection Film</a></li>
+            <li><a href="#" class="hover:text-xline-pink transition">Contact Us</a></li>
+            <li><a href="#" class="hover:text-xline-pink transition">Warranty</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">Contact</h4>
+          <p class="text-sm mb-2">1300 891 779</p>
+          <p class="text-sm">enquiries@x-line.com.au</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Package Tab + Interaction Script -->
+  <script>
+    document.querySelectorAll('.pkg-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const pkg = tab.dataset.pkg;
+
+        // Update tabs
+        document.querySelectorAll('.pkg-tab').forEach(t => {
+          t.classList.remove('active');
+          t.classList.add('bg-xline-gray', 'text-xline-dark');
+        });
+        tab.classList.add('active');
+        tab.classList.remove('bg-xline-gray', 'text-xline-dark');
+
+        // Switch coverage diagrams with fade
+        document.querySelectorAll('.pkg-diagram').forEach(d => {
+          if (d.dataset.diagram === pkg) {
+            d.classList.remove('hidden');
+            d.style.opacity = '0';
+            requestAnimationFrame(() => {
+              d.style.transition = 'opacity 0.5s';
+              d.style.opacity = '1';
+            });
+          } else {
+            d.classList.add('hidden');
+          }
+        });
+
+        // Switch panels with fade
+        document.querySelectorAll('.pkg-panel').forEach(p => {
+          if (p.dataset.panel === pkg) {
+            p.classList.remove('hidden');
+            p.style.opacity = '0';
+            p.style.transform = 'translateY(10px)';
+            requestAnimationFrame(() => {
+              p.style.transition = 'opacity 0.4s, transform 0.4s';
+              p.style.opacity = '1';
+              p.style.transform = 'translateY(0)';
+            });
+          } else {
+            p.classList.add('hidden');
+          }
+        });
+
+        // Close all open details when switching
+        document.querySelectorAll('.pkg-panel details[open]').forEach(d => d.removeAttribute('open'));
+      });
+    });
+  </script>
+
+
+  <!-- Product Tab Script -->
+  <script>
+    document.querySelectorAll('.tab-btn').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const selected = tab.dataset.productTab;
+
+        // Update tab styles
+        document.querySelectorAll('.tab-btn').forEach(t => {
+          t.classList.remove('active');
+          t.classList.add('bg-white', 'text-xline-dark', 'border', 'border-gray-200');
+        });
+        tab.classList.add('active');
+        tab.classList.remove('bg-white', 'text-xline-dark', 'border', 'border-gray-200');
+
+        // Switch panels with fade
+        document.querySelectorAll('.product-panel').forEach(p => {
+          if (p.dataset.product === selected) {
+            p.classList.remove('hidden');
+            p.style.opacity = '0';
+            requestAnimationFrame(() => {
+              p.style.transition = 'opacity 0.5s';
+              p.style.opacity = '1';
+            });
+          } else {
+            p.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

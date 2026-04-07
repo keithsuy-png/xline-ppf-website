@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+screenshots/
+reference.png
+reference2.png
+screenshot.png
+screenshot.mjs
+package.json
+package-lock.json
