@@ -7,3 +7,4 @@ screenshot.png
 screenshot.mjs
 package.json
 package-lock.json
+.tmp/
