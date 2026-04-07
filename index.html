@@ -73,11 +73,11 @@
   <!-- Hero Section with Video Background -->
   <section class="relative h-screen bg-xline-black overflow-hidden pt-16">
     <!-- Video background placeholder - client will provide video of car being wrapped -->
-    <video autoplay muted loop playsinline class="hero-video absolute inset-0 z-0">
+    <!-- Fallback image shown until video loads -->
+    <img src="https://x-line.com.au/wp-content/uploads/2026/03/photo-1545042727-9553d94720fd.avif" alt="Luxury car with PPF" class="absolute inset-0 w-full h-full object-cover z-0">
+    <video autoplay muted loop playsinline class="hero-video absolute inset-0 z-[1]">
       <source src="hero-video.mp4" type="video/mp4">
     </video>
-    <!-- Fallback image while video loads / if no video -->
-    <img src="https://x-line.com.au/wp-content/uploads/2026/03/photo-1545042727-9553d94720fd.avif" alt="Luxury car with PPF" class="absolute inset-0 w-full h-full object-cover z-0">
     <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10"></div>
     <div class="relative z-20 max-w-7xl mx-auto px-6 flex flex-col justify-center h-full">
       <p class="text-xline-pink font-bold text-sm uppercase tracking-[0.3em] mb-4">Protection, Redefined.</p>
